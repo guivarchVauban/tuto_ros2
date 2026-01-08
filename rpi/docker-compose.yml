@@ -1,0 +1,17 @@
+services:
+  ros2_tuto_robot:
+    build: .
+    container_name: ros2_tuto_robot
+    restart: always
+    network_mode: host
+    privileged: true
+    volumes:
+      - "$HOME/ros_docker/ros_ws:/root/ros_ws"
+    environment:
+      - RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
+      - ROS_DOMAIN_ID=42
+    tty: true
+    command: >
+      bash -c "sleep 10 &&
+               source /root/ros_ws/install/setup.bash &&
+               ros2 run robot_controller controller"
