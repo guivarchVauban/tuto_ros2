@@ -9,10 +9,6 @@ RUN apt-get update && apt-get install -y \
     iputils-ping \
     nano \
     ros-humble-rmw-cyclonedds-cpp \
-    ros-humble-v4l2-camera \
-    ros-humble-apriltag \
-    ros-humble-apriltag-detector \
-    ros-humble-apriltag-detector-umich \
     libgpiod2 \
     && rm -rf /var/lib/apt/lists/*
 

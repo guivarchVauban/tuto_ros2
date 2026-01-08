@@ -5,7 +5,7 @@ services:
     network_mode: host
     privileged: true
     volumes:
-      - "/home/sguivarch/Devs/ros_docker/ros_ws:/root/ros_ws"
+      - "/home/sguivarch/Devs/ros_docker/pc/ros_ws:/root/ros_ws"
     environment:
       - RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
       - ROS_DOMAIN_ID=42
